@@ -1,0 +1,5 @@
+e:\5BCA\New folder\InteriorDecorationWebsite\bin\InteriorDecorationWebsite.dll
+e:\5BCA\New folder\InteriorDecorationWebsite\bin\InteriorDecorationWebsite.pdb
+e:\5BCA\New folder\InteriorDecorationWebsite\obj\Debug\InteriorDecorationWebsite.dll
+e:\5BCA\New folder\InteriorDecorationWebsite\obj\Debug\InteriorDecorationWebsite.pdb
+e:\5BCA\New folder\InteriorDecorationWebsite\obj\Debug\InteriorDecorationWebsite.csprojResolveAssemblyReference.cache
