@@ -154,7 +154,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Name", catName);
                         cmd.Parameters.AddWithValue("@Image", imageName);
                         cmd.ExecuteNonQuery();
-                        Response.Write("<script>alert('Category added successfully!');</script>");
+                        lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Category added successfully!</div>";
                     }
                     else
                     {
@@ -164,7 +164,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Image", imageName);
                         cmd.Parameters.AddWithValue("@Id", catId);
                         cmd.ExecuteNonQuery();
-                        Response.Write("<script>alert('Category updated successfully!');</script>");
+                        lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Category updated successfully!</div>";
                     }
                 }
 
@@ -233,7 +233,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Id", catId);
                         cmd.ExecuteNonQuery();
                     }
-                    Response.Write("<script>alert('Category deleted successfully!');</script>");
+                    lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Category deleted successfully!</div>";
                     fillGridCategories();
                     fillGridProducts();
                     fillCategoryDropDown();
@@ -288,7 +288,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Desc", desc);
                         cmd.Parameters.AddWithValue("@Image", imageName);
                         cmd.ExecuteNonQuery();
-                        Response.Write("<script>alert('Product added successfully!');</script>");
+                        lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Product added successfully!</div>";
                     }
                     else
                     {
@@ -301,7 +301,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Image", imageName);
                         cmd.Parameters.AddWithValue("@Id", prodId);
                         cmd.ExecuteNonQuery();
-                        Response.Write("<script>alert('Product updated successfully!');</script>");
+                        lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Product updated successfully!</div>";
                     }
                 }
 
@@ -374,7 +374,7 @@ namespace InteriorDecorationWebsite
                         cmd.Parameters.AddWithValue("@Id", prodId);
                         cmd.ExecuteNonQuery();
                     }
-                    Response.Write("<script>alert('Product deleted successfully!');</script>");
+                    lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Product deleted successfully!</div>";
                     fillGridProducts();
                     fillStats();
                 }

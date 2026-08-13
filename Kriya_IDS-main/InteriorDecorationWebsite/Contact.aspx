@@ -2,15 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Header Banner with Background Image -->
-    <div class="page-banner" style="background-image: url('images/banner/contact-bg.jpg');">
+    <!-- Header Banner -->
+    <div class="page-banner">
         <div class="page-banner-content">
             <h1>Get In Touch</h1>
-            <p>Connect with our principal interior designers for consultations, project inquiries, or custom design quotes.</p>
+            <p>Connect with our interior designers for consultations, project inquiries, or custom design quotes.</p>
         </div>
     </div>
 
-    <section class="container section-padding" style="padding-top: 1rem;">
+    <section class="container section-padding">
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
 
         <div class="contact-grid">

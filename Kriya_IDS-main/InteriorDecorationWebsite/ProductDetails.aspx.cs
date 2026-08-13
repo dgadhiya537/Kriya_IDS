@@ -116,7 +116,6 @@ namespace InteriorDecorationWebsite
                 }
 
                 lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Product added to your shopping cart!</div>";
-                Response.Write("<script>alert('Item added to cart!');</script>");
             }
             catch (Exception ex)
             {
@@ -157,7 +156,6 @@ namespace InteriorDecorationWebsite
                 }
 
                 lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Product added to your wishlist!</div>";
-                Response.Write("<script>alert('Item added to wishlist!');</script>");
             }
             catch (Exception ex)
             {

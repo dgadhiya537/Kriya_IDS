@@ -52,6 +52,10 @@ namespace InteriorDecorationWebsite
                     SqlCommand wishCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_wishlist WHERE UserId = @UserId", con);
                     wishCmd.Parameters.AddWithValue("@UserId", userId);
                     lblWishlistCount.Text = wishCmd.ExecuteScalar().ToString();
+
+                    SqlCommand cartCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_cart WHERE UserId = @UserId2", con);
+                    cartCmd.Parameters.AddWithValue("@UserId2", userId);
+                    lblCartCount.Text = cartCmd.ExecuteScalar().ToString();
                 }
             }
             catch (Exception ex)

@@ -104,7 +104,6 @@ namespace InteriorDecorationWebsite
                     {
                         master.UpdateNavMenu();
                     }
-                    Response.Write("<script>alert('Item removed from cart!');</script>");
                 }
                 catch (Exception ex)
                 {
@@ -133,7 +132,6 @@ namespace InteriorDecorationWebsite
                 }
 
                 lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Thank you for your order! Your purchase has been processed successfully.</div>";
-                Response.Write("<script>alert('Order placed successfully!');</script>");
             }
             catch (Exception ex)
             {

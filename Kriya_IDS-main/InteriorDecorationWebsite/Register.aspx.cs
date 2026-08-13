@@ -79,7 +79,6 @@ namespace InteriorDecorationWebsite
 
                     clearFields();
                     lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Registration successful! You can now log in.</div>";
-                    Response.Write("<script>alert('User registered successfully!');</script>");
                     fillGrid();
                 }
                 catch (Exception ex)
@@ -108,7 +107,6 @@ namespace InteriorDecorationWebsite
                     btnSubmit.Text = "Save";
                     btnCancel.Visible = false;
                     lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> User details updated successfully!</div>";
-                    Response.Write("<script>alert('User updated successfully!');</script>");
                     fillGrid();
                 }
                 catch (Exception ex)
@@ -189,7 +187,6 @@ namespace InteriorDecorationWebsite
                     else
                     {
                         lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> User deleted successfully!</div>";
-                        Response.Write("<script>alert('User deleted successfully!');</script>");
                         fillGrid();
                     }
                 }

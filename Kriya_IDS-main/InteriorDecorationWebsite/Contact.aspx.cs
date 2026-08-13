@@ -43,7 +43,6 @@ namespace InteriorDecorationWebsite
                 txtMessage.Text = "";
 
                 lblMsg.Text = "<div class='msg-alert msg-success'><i class='fa-solid fa-circle-check'></i> Thank you! Your inquiry has been submitted successfully. Our design team will contact you shortly.</div>";
-                Response.Write("<script>alert('Message submitted successfully!');</script>");
             }
             catch (Exception ex)
             {

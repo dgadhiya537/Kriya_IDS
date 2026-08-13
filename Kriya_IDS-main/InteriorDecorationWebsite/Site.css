@@ -112,13 +112,14 @@ body {
 /* Page Banner with Background Image */
 .page-banner {
     position: relative;
-    background: linear-gradient(135deg, rgba(66, 54, 46, 0.82), rgba(90, 74, 63, 0.82)), url('images/banner/products-bg.jpg') center/cover no-repeat;
-    padding: 5.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(66, 54, 46, 0.88), rgba(90, 74, 63, 0.88)), url('images/banner/products-bg.jpg') center/cover no-repeat;
+    padding: 4rem 1.5rem;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 0;
     box-shadow: var(--shadow-md);
 }
+
 .page-banner-content {
     position: relative;
     z-index: 2;
@@ -175,19 +176,21 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1rem;
     list-style: none;
+    flex-wrap: nowrap;
 }
 
 .nav-link {
     color: #cbd5e1;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.35rem;
+    white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -215,6 +218,24 @@ body {
     background-color: var(--accent-hover);
     transform: translateY(-1px);
 }
+
+.nav-icon-btn {
+    width: 36px;
+    height: 36px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid rgba(168, 145, 127, 0.5);
+    font-size: 1rem !important;
+    transition: all 0.3s ease;
+}
+.nav-icon-btn:hover {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    border-color: var(--accent-color);
+}
+
 
 /* Layout Container */
 .main-content {
@@ -419,6 +440,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    align-items: start;
+}
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 768px) {
     .contact-grid {
@@ -451,6 +478,29 @@ body {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
     overflow-x: auto;
+}
+
+/* Fix large product images inside GridView tables */
+.grid-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Two-column layout for UserDashboard */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
 }
 .custom-grid {
     width: 100%;
@@ -528,16 +578,52 @@ body {
     font-size: 0.88rem;
 }
 
-/* Action Box — groups Edit/Delete buttons in GridViews */
+
+/* Action Box — wraps Edit + Delete as a row */
 .action-box {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    padding: 0.35rem 0.6rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: #faf8f6;
+    gap: 0.5rem;
 }
+
+/* Green Edit button */
+.btn-action-edit {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background-color: #22c55e;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+.btn-action-edit:hover {
+    background-color: #16a34a;
+    color: #ffffff !important;
+}
+
+/* Red Delete button */
+.btn-action-delete {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background-color: #ef4444;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+.btn-action-delete:hover {
+    background-color: #dc2626;
+    color: #ffffff !important;
+}
+
 
 /* About page – mission/vision/team/achievements cards */
 .about-info-grid {

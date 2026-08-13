@@ -3,12 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Header Banner -->
-    <div class="page-banner" style="background-image: url('images/banner/cart-bg.jpg');">
+    <div class="page-banner">
         <div class="page-banner-content">
             <h1>Your Shopping Cart</h1>
-            <p>Review your selected interior design furnishings, luxury decor items, and bespoke pieces.</p>
+            <p>Review your selected interior design furnishings and bespoke pieces.</p>
         </div>
     </div>
+
 
     <section class="container section-padding" style="padding-top: 1rem;">
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>

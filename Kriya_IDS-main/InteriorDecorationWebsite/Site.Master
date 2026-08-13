@@ -17,7 +17,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="Home.aspx" class="brand-logo">
-                    <i class="fa-solid fa-compass-drafting"></i> Kriya<span>-IDS</span>
+                    Kriya<span>-IDS</span>
                 </a>
                 
                 <ul class="nav-menu">
@@ -25,26 +25,33 @@
                     <li><a href="About.aspx" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
                     <li><a href="Services.aspx" class="nav-link"><i class="fa-solid fa-couch"></i> Services</a></li>
                     <li><a href="Products.aspx" class="nav-link"><i class="fa-solid fa-border-all"></i> Products</a></li>
-                    <li><a href="Contact.aspx" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
-                    
+                    <li><a href="Contact.aspx" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
                     <asp:PlaceHolder ID="phAnonymous" runat="server">
+                        <li><a href="Cart.aspx" class="nav-link nav-icon-btn" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="Wishlist.aspx" class="nav-link nav-icon-btn" title="Wishlist"><i class="fa-solid fa-heart"></i></a></li>
                         <li><a href="Login.aspx" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
                         <li><a href="Register.aspx" class="nav-link btn-nav"><i class="fa-solid fa-user-plus"></i> Register</a></li>
                     </asp:PlaceHolder>
 
                     <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
                         <li>
-                            <a href="Cart.aspx" class="nav-link">
-                                <i class="fa-solid fa-cart-shopping"></i> Cart 
+                            <a href="Cart.aspx" class="nav-link nav-icon-btn" title="My Cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
                                 <asp:Label ID="lblCartCount" runat="server" Text="0" CssClass="cart-badge-count"></asp:Label>
                             </a>
                         </li>
-                        <li><a href="Wishlist.aspx" class="nav-link"><i class="fa-solid fa-heart"></i> Wishlist</a></li>
+                        <li>
+                            <a href="Wishlist.aspx" class="nav-link nav-icon-btn" title="My Wishlist" style="position:relative;">
+                                <i class="fa-solid fa-heart"></i>
+                                <asp:Label ID="lblWishCount" runat="server" Text="" CssClass="cart-badge-count" Visible="false"></asp:Label>
+                            </a>
+                        </li>
                         <asp:PlaceHolder ID="phAdmin" runat="server" Visible="false">
-                            <li><a href="AdminDashboard.aspx" class="nav-link"><i class="fa-solid fa-gauge-high"></i> Admin Panel</a></li>
+                            <li><a href="AdminDashboard.aspx" class="nav-link"><i class="fa-solid fa-gauge-high"></i> Admin</a></li>
                         </asp:PlaceHolder>
                         <asp:PlaceHolder ID="phUser" runat="server" Visible="false">
-                            <li><a href="UserDashboard.aspx" class="nav-link"><i class="fa-solid fa-user"></i> Profile (<asp:Label ID="lblUserName" runat="server"></asp:Label>)</a></li>
+                            <li><a href="UserDashboard.aspx" class="nav-link"><i class="fa-solid fa-user"></i> <asp:Label ID="lblUserName" runat="server"></asp:Label></a></li>
                         </asp:PlaceHolder>
                         <li>
                             <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" CssClass="nav-link" CausesValidation="false">
