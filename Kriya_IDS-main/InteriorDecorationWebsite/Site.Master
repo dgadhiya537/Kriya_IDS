@@ -1,0 +1,104 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="InteriorDecorationWebsite.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Kriya-IDS</title>
+    <link rel="stylesheet" href="Site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Navigation Header -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="Home.aspx" class="brand-logo">
+                    <i class="fa-solid fa-compass-drafting"></i> Kriya<span>-IDS</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="Home.aspx" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="About.aspx" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                    <li><a href="Services.aspx" class="nav-link"><i class="fa-solid fa-couch"></i> Services</a></li>
+                    <li><a href="Products.aspx" class="nav-link"><i class="fa-solid fa-border-all"></i> Products</a></li>
+                    <li><a href="Contact.aspx" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                    
+                    <asp:PlaceHolder ID="phAnonymous" runat="server">
+                        <li><a href="Login.aspx" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                        <li><a href="Register.aspx" class="nav-link btn-nav"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+                    </asp:PlaceHolder>
+
+                    <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                        <li>
+                            <a href="Cart.aspx" class="nav-link">
+                                <i class="fa-solid fa-cart-shopping"></i> Cart 
+                                <asp:Label ID="lblCartCount" runat="server" Text="0" CssClass="cart-badge-count"></asp:Label>
+                            </a>
+                        </li>
+                        <li><a href="Wishlist.aspx" class="nav-link"><i class="fa-solid fa-heart"></i> Wishlist</a></li>
+                        <asp:PlaceHolder ID="phAdmin" runat="server" Visible="false">
+                            <li><a href="AdminDashboard.aspx" class="nav-link"><i class="fa-solid fa-gauge-high"></i> Admin Panel</a></li>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="phUser" runat="server" Visible="false">
+                            <li><a href="UserDashboard.aspx" class="nav-link"><i class="fa-solid fa-user"></i> Profile (<asp:Label ID="lblUserName" runat="server"></asp:Label>)</a></li>
+                        </asp:PlaceHolder>
+                        <li>
+                            <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" CssClass="nav-link" CausesValidation="false">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                            </asp:LinkButton>
+                        </li>
+                    </asp:PlaceHolder>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Body Placeholder -->
+        <main class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h4>Kriya-IDS</h4>
+                    <p>Crafting bespoke luxury residential and commercial interior spaces tailored to reflect your lifestyle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="Home.aspx">Home</a></li>
+                        <li><a href="About.aspx">About Us</a></li>
+                        <li><a href="Services.aspx">Design Services</a></li>
+                        <li><a href="Products.aspx">Product Catalog</a></li>
+                        <li><a href="Contact.aspx">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Client Services</h4>
+                    <ul>
+                        <li><a href="Wishlist.aspx">My Wishlist</a></li>
+                        <li><a href="Cart.aspx">My Cart</a></li>
+                        <li><a href="Register.aspx">User Management</a></li>
+                        <li><a href="Login.aspx">Account Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> 100 Architectural Way, Luxury Suite 500</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 555-KRIYA</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@kriya-ids.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%: DateTime.Now.Year %> Kriya-IDS. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
