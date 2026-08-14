@@ -3,8 +3,12 @@
     <style>
         /* ── About Hero ── */
         .about-hero {
-            background: linear-gradient(135deg, rgba(66,54,46,0.82), rgba(90,74,63,0.88)),
-                        url('images/categories/living-room.jpg') center/cover no-repeat;
+            background-color: #42362e;
+            background-image: linear-gradient(135deg, rgba(66,54,46,0.82), rgba(90,74,63,0.88)),
+                              url('images/categories/living-room.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
             padding: 6rem 1.5rem;
             text-align: center;
             color: #ffffff;

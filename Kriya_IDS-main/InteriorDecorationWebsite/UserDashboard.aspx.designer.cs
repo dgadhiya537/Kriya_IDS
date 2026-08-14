@@ -14,5 +14,7 @@ namespace InteriorDecorationWebsite {
         protected global::System.Web.UI.WebControls.Label lblMobile;
         
         protected global::System.Web.UI.WebControls.Label lblWishlistCount;
+        
+        protected global::System.Web.UI.WebControls.Label lblCartCount;
     }
 }

@@ -3,13 +3,18 @@
     <style>
         /* ── Services Hero Banner ── */
         .services-hero {
-            background: linear-gradient(135deg, rgba(66,54,46,0.85), rgba(90,74,63,0.9)),
-                        url('images/banner/products-bg.jpg') center/cover no-repeat;
+            background-color: #42362e;
+            background-image: linear-gradient(135deg, rgba(66,54,46,0.85), rgba(90,74,63,0.9)),
+                              url('images/banner/products-bg.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
             padding: 5rem 1.5rem;
             text-align: center;
             color: #ffffff;
             margin-bottom: 0;
         }
+
         .services-hero h1 {
             font-family: var(--font-heading);
             font-size: 3rem;
